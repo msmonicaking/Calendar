@@ -50,6 +50,5 @@ namespace Calendar
             daycontainer.Controls.Add(ucDays);
          }
       }
-
    }
 }

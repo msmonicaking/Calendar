@@ -35,10 +35,11 @@ namespace Calendar
          // daylabel
          // 
          this.daylabel.AutoSize = true;
-         this.daylabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.daylabel.Location = new System.Drawing.Point(113, 0);
+         this.daylabel.Font = new System.Drawing.Font("MS Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.daylabel.Location = new System.Drawing.Point(120, 5);
          this.daylabel.Name = "daylabel";
-         this.daylabel.Size = new System.Drawing.Size(34, 25);
+         this.daylabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
+         this.daylabel.Size = new System.Drawing.Size(29, 20);
          this.daylabel.TabIndex = 0;
          this.daylabel.Text = "00";
          // 
@@ -46,9 +47,10 @@ namespace Calendar
          // 
          this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
          this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-         this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+         this.BackColor = System.Drawing.SystemColors.ControlLightLight;
          this.Controls.Add(this.daylabel);
          this.Name = "UserControlDays";
+         this.Size = new System.Drawing.Size(150, 100);
          this.Load += new System.EventHandler(this.UserControlDays_Load);
          this.ResumeLayout(false);
          this.PerformLayout();
