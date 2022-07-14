@@ -17,9 +17,7 @@ namespace Calendar
          InitializeComponent();
       }
 
-      private void label7_Click(object sender, EventArgs e) { }
-
-      private void Form1_Load(object sender, EventArgs e)
+      private void Form1_Load_1(object sender, EventArgs e)
       {
          displayDays();
       }
@@ -35,10 +33,23 @@ namespace Calendar
          int days = DateTime.DaysInMonth(now.Year, now.Month);
 
          // convert startofthemonth
-         int daysoftheweek = Convert.ToInt32(startofthemonth.DayOfWeek.ToString("d"));
+         int dayoftheweek = Convert.ToInt32(startofthemonth.DayOfWeek.ToString("d")) + 1;
 
          // create blank usercontrol
-         
+         for (int i = 1; i < dayoftheweek; i++)
+         {
+            UserControlBlank ucblank = new UserControlBlank();
+            daycontainer.Controls.Add(ucblank);
+         }
+
+         // create usercontrol for days
+         for (int i = 1; i <= days; i ++)
+         {
+            UserControlDays ucDays = new UserControlDays();
+            ucDays.days(i);
+            daycontainer.Controls.Add(ucDays);
+         }
       }
+
    }
 }
