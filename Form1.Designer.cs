@@ -39,6 +39,7 @@ namespace Calendar
          this.label6 = new System.Windows.Forms.Label();
          this.label7 = new System.Windows.Forms.Label();
          this.label8 = new System.Windows.Forms.Label();
+         this.LBDATE = new System.Windows.Forms.Label();
          this.SuspendLayout();
          // 
          // daycontainer
@@ -56,6 +57,7 @@ namespace Calendar
          this.buttonnext.TabIndex = 1;
          this.buttonnext.Text = "Next";
          this.buttonnext.UseVisualStyleBackColor = true;
+         this.buttonnext.Click += new System.EventHandler(this.buttonnext_Click);
          // 
          // buttonprevious
          // 
@@ -65,6 +67,7 @@ namespace Calendar
          this.buttonprevious.TabIndex = 2;
          this.buttonprevious.Text = "Previous";
          this.buttonprevious.UseVisualStyleBackColor = true;
+         this.buttonprevious.Click += new System.EventHandler(this.buttonprevious_Click);
          // 
          // label1
          // 
@@ -136,11 +139,22 @@ namespace Calendar
          this.label8.TabIndex = 10;
          this.label8.Text = "Saturday";
          // 
+         // LBDATE
+         // 
+         this.LBDATE.AutoSize = true;
+         this.LBDATE.Font = new System.Drawing.Font("MS Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.LBDATE.Location = new System.Drawing.Point(484, 20);
+         this.LBDATE.Name = "LBDATE";
+         this.LBDATE.Size = new System.Drawing.Size(152, 28);
+         this.LBDATE.TabIndex = 11;
+         this.LBDATE.Text = "MONTH YEAR";
+         // 
          // Form1
          // 
          this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
          this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
          this.ClientSize = new System.Drawing.Size(1120, 826);
+         this.Controls.Add(this.LBDATE);
          this.Controls.Add(this.label8);
          this.Controls.Add(this.label7);
          this.Controls.Add(this.label5);
@@ -173,6 +187,7 @@ namespace Calendar
       private System.Windows.Forms.Label label6;
       private System.Windows.Forms.Label label7;
       private System.Windows.Forms.Label label8;
+      private System.Windows.Forms.Label LBDATE;
    }
 }
 

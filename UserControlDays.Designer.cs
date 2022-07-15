@@ -42,6 +42,7 @@ namespace Calendar
          this.daylabel.Size = new System.Drawing.Size(29, 20);
          this.daylabel.TabIndex = 0;
          this.daylabel.Text = "00";
+         this.daylabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
          // 
          // UserControlDays
          // 

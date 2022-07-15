@@ -12,6 +12,7 @@ namespace Calendar
 {
    public partial class Form1 : Form
    {
+      DateTime date;
       public Form1()
       {
          InitializeComponent();
@@ -19,18 +20,23 @@ namespace Calendar
 
       private void Form1_Load_1(object sender, EventArgs e)
       {
+         // start on todays date
+         date = DateTime.Now;
+
          displayDays();
       }
 
       private void displayDays()
       {
-         DateTime now = DateTime.Now;
+         String monthName = date.ToString("MMMM");
+         String yearName = date.ToString("yyyy");
+         LBDATE.Text = monthName + " " + yearName;
 
          // get the first day of the month
-         DateTime startofthemonth = new DateTime(now.Year, now.Month, 1);
+         DateTime startofthemonth = new DateTime(date.Year, date.Month, 1);
 
          // get the count of the days of the month
-         int days = DateTime.DaysInMonth(now.Year, now.Month);
+         int days = DateTime.DaysInMonth(date.Year, date.Month);
 
          // convert startofthemonth
          int dayoftheweek = Convert.ToInt32(startofthemonth.DayOfWeek.ToString("d")) + 1;
@@ -49,6 +55,28 @@ namespace Calendar
             ucDays.days(i);
             daycontainer.Controls.Add(ucDays);
          }
+      }
+
+      private void buttonnext_Click(object sender, EventArgs e)
+      {
+         // clear containers
+         daycontainer.Controls.Clear();
+
+         // increment month
+         date = date.AddMonths(1);
+
+         displayDays();
+      }
+
+      private void buttonprevious_Click(object sender, EventArgs e)
+      {
+         // clear containers
+         daycontainer.Controls.Clear();
+
+         // increment month
+         date = date.AddMonths(-1);
+
+         displayDays();
       }
    }
 }
