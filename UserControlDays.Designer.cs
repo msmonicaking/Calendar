@@ -30,6 +30,7 @@ namespace Calendar
       private void InitializeComponent()
       {
          this.daylabel = new System.Windows.Forms.Label();
+         this.checkBox1 = new System.Windows.Forms.CheckBox();
          this.SuspendLayout();
          // 
          // daylabel
@@ -44,11 +45,24 @@ namespace Calendar
          this.daylabel.Text = "00";
          this.daylabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
          // 
+         // checkBox1
+         // 
+         this.checkBox1.AutoSize = true;
+         this.checkBox1.BackColor = System.Drawing.Color.Transparent;
+         this.checkBox1.Cursor = System.Windows.Forms.Cursors.Default;
+         this.checkBox1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+         this.checkBox1.Location = new System.Drawing.Point(124, 76);
+         this.checkBox1.Name = "checkBox1";
+         this.checkBox1.Size = new System.Drawing.Size(18, 17);
+         this.checkBox1.TabIndex = 1;
+         this.checkBox1.UseVisualStyleBackColor = false;
+         // 
          // UserControlDays
          // 
          this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
          this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
          this.BackColor = System.Drawing.SystemColors.ControlLightLight;
+         this.Controls.Add(this.checkBox1);
          this.Controls.Add(this.daylabel);
          this.Name = "UserControlDays";
          this.Size = new System.Drawing.Size(150, 100);
@@ -61,5 +75,6 @@ namespace Calendar
       #endregion
 
       private System.Windows.Forms.Label daylabel;
+      private System.Windows.Forms.CheckBox checkBox1;
    }
 }
